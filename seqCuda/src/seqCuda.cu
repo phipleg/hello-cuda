@@ -9,14 +9,17 @@ using namespace std;
 
 int main()
 {
-    const int N=100000000;
+    const int N=10000;
 
     thrust::device_vector<int> a(N);
     thrust::sequence(a.begin(), a.end(), 0);
-    int sumA= thrust::reduce(a.begin(), a.end(),0);
-    int sumCheck=0;
+    long sumA= thrust::reduce(a.begin(), a.end(),0);
+    long sumCheck=0;
     for (int i=0; i<N; i++) sumCheck += i;
-    
+
+    cout << "Host: " << sumCheck << endl;
+    cout << "GPU:  " << sumA << endl;
+
     if (sumA == sumCheck) cout << "Test Succeeded!" << endl;
     else {
         cerr << "Test FAILED!";
