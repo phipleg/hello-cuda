@@ -1,5 +1,3 @@
-# hello-world
+# hello-cuda
 
-Hi everybody!
-
-Finished Ninja readme file.
+Playground for learning CUDA
