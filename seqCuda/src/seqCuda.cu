@@ -9,7 +9,7 @@ using namespace std;
 
 int main()
 {
-    const int N=5000;
+    const int N=100000000;
 
     thrust::device_vector<int> a(N);
     thrust::sequence(a.begin(), a.end(), 0);

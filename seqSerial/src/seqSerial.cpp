@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-    const int N=5000;
+    const int N=100000000;
     vector<int> a(N);
     for(int i=0; i<N; i++) a[i]=i;
 
